@@ -1,0 +1,28 @@
+//contact
+
+.styled_blog__contact__top{
+	&--address,
+	&--email,
+	&--phone{
+		position:relative;
+		padding: 0 0 0.5rem 1rem;
+	}
+
+	&--address-icon,
+	&--email-icon,
+	&--phone-icon{
+		position:absolute;
+		left:0;
+		@include styled_blog($colors) {
+    		color: themed('secondaryColor');
+  		}
+	}
+
+	
+}
+
+.wpcf7{
+	label{
+		display:block;
+	}
+}

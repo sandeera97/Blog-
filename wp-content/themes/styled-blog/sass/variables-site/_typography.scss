@@ -1,0 +1,112 @@
+$font__main: sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font__body:'Roboto';
+$font__heading:'Poppins';
+
+
+$base-font-size: 1rem;
+$base-line-height: 1.75 * $base-font-size;
+
+
+$breakpoints:(
+
+	sm	:	720px,
+	md	:	960px,
+	lg	:	1280px,
+	xl	:	1400px
+	);
+
+
+$base-font-sizes: (
+	null	:	(.9rem,$base-line-height * .9),
+	sm		:	(.9rem,$base-line-height * .9),
+	md		:	(.9rem,$base-line-height * .9),
+	lg		:	(.9rem,$base-line-height * .9),
+	xl		:	(1rem,$base-line-height)
+);
+
+$heading1-font-sizes: (
+	null	:	(1.75rem,$base-line-height * 1.75),
+	sm		:	(2.75rem,$base-line-height * 2.75),
+	md		:	(2rem,$base-line-height * 2),
+	lg		:	(3rem,$base-line-height * 3),
+	xl		:	(3.75rem,$base-line-height * 3),
+);
+
+$heading2-font-sizes: (
+	null	:	(1.75rem,$base-line-height * 1.25),
+	sm		:	(1.75rem,$base-line-height * 1.25),
+	md		:	(2.25rem,$base-line-height * 1.75),
+	lg		:	(2.25rem,$base-line-height * 1.75),
+	xl		:	(2.75rem,$base-line-height * 2.5),
+);
+
+$heading3-font-sizes: (
+	null	:	(1.25rem,$base-line-height * 1),
+	sm		:	(1.25rem,$base-line-height * 1),
+	md		:	(1.25rem,$base-line-height * 1),
+	lg		:	(1.5rem,$base-line-height * 1),
+	xl		:	(1.75rem,$base-line-height * 1.25)
+);
+
+$heading4-font-sizes: (
+	null	:	(.9rem,$base-line-height * .9),
+	sm		:	(.9rem,$base-line-height * .9),
+	md		:	(.9rem,$base-line-height * .9),
+	lg		:	(.9rem,$base-line-height * .9),
+	xl		:	(1rem,$base-line-height * 1)
+);
+
+$small-font-sizes: (
+	null	:	(.725rem,$base-line-height * .725),
+	sm		:	(.725rem,$base-line-height * .725),
+	md		:	(.775rem,$base-line-height * .775),
+	lg		:	(.775rem,$base-line-height * .775),
+	xl		:	(.825rem,$base-line-height * .825)
+);
+
+$extrasmall-font-sizes: (
+	null	:	(.7rem,$base-line-height * .7),
+	sm		:	(.7rem,$base-line-height * .7),
+	md		:	(.725rem,$base-line-height * .725),
+	lg		:	(.725rem,$base-line-height * .725),
+	xl		:	(.75rem,$base-line-height * .75)
+);
+
+$text-settings:(
+	xs	:(
+			font-size:				.75rem, //12px
+			line-height: 			$base-line-height
+		),
+
+	sm 	:(
+			font-size: 				.875rem, //14px
+			line-height: 			$base-line-height
+		),
+
+	base :(
+			font-size: 				1rem, //16px
+			line-height:			$base-line-height 
+		),
+
+	md :(
+			font-size: 				1.75rem, //28px
+			line-height:			$base-line-height * 1.4
+		),
+
+	lg  :(
+			font-size: 				2.75rem,  //44px 
+			line-height:			$base-line-height * 2
+		),
+
+	xl	:(
+			font-size: 				3.75rem,  //60px
+			line-height:			$base-line-height * 3
+		)
+	);
+ 
+
+

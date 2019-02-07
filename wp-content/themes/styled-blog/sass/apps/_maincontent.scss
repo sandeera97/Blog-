@@ -1,0 +1,64 @@
+.styled_blog__main__content__block{
+	padding:1rem ;
+	
+	@include mq($min-width: 768px) {
+		padding:2rem ;
+	};
+	
+	@include mq($min-width: 1200px) {
+		padding:3rem 3rem 5rem;
+	};
+	
+	.entry-content{
+		@include styled_blog($colors) {
+		    background-color: themed('nutralColor');
+		   	@include mq($max-width: 768px) {
+		   		margin-top:0;
+		   		@include transform(translateY(0rem));
+		   }
+		    
+		}
+
+		@include mq($min-width: 768px) {
+			@include transform(translateY(-2rem));
+			margin:0;
+	};
+
+		padding: 2rem;
+		padding-right: 1px;
+
+	h2.entry-title{
+		@extend %heading;
+		@include font-size($heading3-font-sizes);
+	}
+
+	}
+
+	.format-audio,
+	.format-video{
+		@include mq($min-width: 768px) {
+			margin-bottom:1.5rem + 2rem;
+		}
+		.entry-content{
+			@include transform(translateY(0px));
+		}
+	}
+
+	//no post
+	.no-post{
+		.entry-content{
+			@include transform(translateY(0px));
+		}
+	}
+}
+
+.home{
+	.styled_blog__main__content__block{
+		padding:1rem 1rem 3rem ;
+		@include mq($min-width: 768px) {
+			padding:2rem 2rem 3rem;
+		};
+
+
+	}
+}

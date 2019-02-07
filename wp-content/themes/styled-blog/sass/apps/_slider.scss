@@ -1,0 +1,49 @@
+//Homepage Top Slider
+
+.styled_blog_latest_trend_wrap{
+	padding: 22px 0px;
+	border-bottom: 1px solid $border-color;
+		
+	h2{
+
+		span{
+			font-size: 18px;
+			color: $secondary-color;
+			font-weight: 600;
+			float: right;
+			background-color: $grey-background;
+			padding: 15px 20px;
+			position: relative;
+		
+			&:after{
+				content: '';
+			    width: 0;
+			    height: 0;
+			    border-top: 7px solid transparent;
+			    border-left: 7px solid $grey-background;
+			    border-bottom: 7px solid transparent;
+			    position: absolute;
+			    right: -7px;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto;
+			}
+		}
+	}
+
+	.styled_blog_header_trends{
+		display: flex;
+		text-align: justify;
+		align-items: center;
+
+		.lSSlideOuter {
+
+			.lSSlideWrapper {
+
+				.styled_blog_latest_trends{
+					font-family: $roboto;
+				}
+			}
+		}
+	}
+}

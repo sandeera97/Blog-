@@ -1,0 +1,50 @@
+ .styled_blog__left__sidebar{
+ 	
+ 	@include styled_blog($colors) {
+    	background-color: themed('nutralColor');
+  	};
+    padding-bottom:2rem;
+    padding-top:2rem;
+
+    @include mq($min-width: 768px) {
+      position:fixed;
+      padding-top:0rem;
+      padding-bottom:8rem;
+      height:100vh;
+      overflow-y:auto;
+      width: inherit; 
+      max-width: inherit;
+    };
+
+  	&::-webkit-scrollbar-button{
+	    background-repeat: no-repeat;
+	    width: 5px;
+	    height: 0px;
+   	}
+
+  	&::-webkit-scrollbar-track  {
+    	background-color: transparent;}
+
+  	&::-webkit-scrollbar-thumb   {
+	    border-radius: 3px;
+	    @include styled_blog($colors) {
+    		background-color: themed('secondaryColor');
+  		};
+	    width:3px;
+	}
+  	&::-webkit-scrollbar {
+    	width: 4px; 
+	}
+  	
+ }
+
+ .styled_blog__main__content{
+	.col-md-4.col-sm-12,.col-md-2.col-sm-12{
+		
+    @include mq($min-width: 768px) {
+        padding-left:0; 
+      };
+	}
+
+  
+}

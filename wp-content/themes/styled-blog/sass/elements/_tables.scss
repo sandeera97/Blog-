@@ -1,0 +1,25 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	
+	}
+
+	thead th, tbody td, tbody th{
+		padding:1rem;
+	}
+
+	thead th{
+		border-top:1px solid;
+		border-bottom:2px solid;
+		@include styled_blog($colors) {
+			border-color: themed('borderColor');
+		}
+	}
+
+	tbody td, tbody th{
+		border-bottom:1px solid;
+		@include styled_blog($colors) {
+			border-color: themed('borderColor');
+		}	
+	}
+

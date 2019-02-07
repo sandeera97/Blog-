@@ -1,0 +1,198 @@
+
+
+
+//Main
+:root{
+	font-size:18px;
+}
+
+body{
+	font-family: $font__body;
+	@include font-size($base-font-sizes);
+	@include styled_blog($colors) {
+    	color: themed('baseColor');
+  	}
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+.bodyfixed{
+	position:fixed;
+	width:100%;
+}
+.styled_blog--light{
+	color:$base__color-light;
+	background-color:$background__color-light;
+}
+.styled_blog--dark{
+	color:$base__color-dark;
+	background-color:$background__color-dark;
+}
+
+
+
+h1, h2, h3, h4, h5, 
+.h1, .h2, .h3, .h4, .h5 {
+	@include styled_blog($colors) {
+    color: themed('headingColor');
+  }
+  	font-weight:600;
+  	font-family:$font__heading;
+  	position:relative;
+  
+
+}
+h1,.h1{
+	@include font-size($heading1-font-sizes);
+}
+h2,.h2{
+	@include font-size($heading2-font-sizes);
+}
+
+h3,.h3{
+	@include font-size($heading3-font-sizes);
+}
+
+h4,.h4{
+	@include font-size($base-font-sizes);
+}
+
+h5,.h5{
+	@include font-size($small-font-sizes);
+}
+
+h6,.h6{
+	@include font-size($extrasmall-font-sizes);
+}
+
+
+
+ul,ol{
+	margin: 0 0 1.5em 0em;
+	
+}
+li{
+	padding:.3rem 0;
+}
+a{
+	text-decoration: none;
+	@include styled_blog($colors) {
+    	color: themed('linkColor');
+  	}
+  	@include transition(all 300ms ease-in-out);
+
+	&:hover{
+		text-decoration: none;
+		@include styled_blog($colors) {
+    		color: themed(linkhoverColor);
+  		}
+	}
+
+	&:visited{
+		@include styled_blog($colors) {
+    	color: themed('linkColor');
+  		}
+	}
+
+	&:active, &.active{
+		@include styled_blog($colors) {
+    	color: themed('linkColor');
+  		}
+	}
+}
+
+.btn{
+	@extend %btn;
+}
+
+.styled_blog__main__content{
+	position:relative;
+	
+ 
+}
+
+.styled_blog_latest_trend_show .styled_blog__main__content{
+	top:86px;
+}
+
+//Device
+.styled_blog__branding--device{
+	@include mq($min-width: 768px) {
+		display:none;
+	};
+	
+}
+
+.main-title{
+	margin-bottom:1.5rem;
+}
+
+//Pages
+	.page-title{
+		@extend %heading;
+   		@include font-size($heading2-font-sizes);
+  	}
+  	.search-404{
+  		label{
+  			display:block;
+  		}
+  	}
+
+pre {
+	@include styled_blog($colors) {
+			background-color: themed('backgroundColor');
+			color: themed('baseColor');
+		}
+	}
+
+
+.page-title{}
+/*--------------------------------------------------------------
+# Extend
+--------------------------------------------------------------*/
+@import "extend";
+/*--------------------------------------------------------------
+# Ticker
+--------------------------------------------------------------*/
+@import "ticker";
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+@import "sidebar";
+
+/*--------------------------------------------------------------
+# Sticky Right
+--------------------------------------------------------------*/
+@import "stickyright";
+
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+@import "maincontent";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation";
+
+
+
+/*--------------------------------------------------------------
+# Widget
+--------------------------------------------------------------*/
+@import "widget";
+
+/*--------------------------------------------------------------
+# Pagination
+--------------------------------------------------------------*/
+@import "pagination";
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+@import "contact";
+
+
+ 

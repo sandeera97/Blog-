@@ -1,0 +1,99 @@
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: royalblue;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+
+//Background color
+	
+	$grey-background: #ebebe9;
+
+
+//Font family
+
+	$roboto: 'Roboto', sans-serif;
+	$rubik: 'Rubik', sans-serif;
+	$poppins: 'Poppins', sans-serif;
+
+
+//Color
+
+	$primary-color: #555;
+	$secondary-color: #333;
+	$grey: #b8b8b8;
+	$border-color: #ebebe9;
+	$black: #000;
+
+
+
+ 
+
+
+
+/*
+ * Actual styles for the app
+ */
+//light Theme Colors
+	$nutral__color-light:			#ffffff;
+	$background__color-light:		#ebebe9;
+	$secondary__color-light:		#b8b8b8;
+	$base__color-light:				#555555;
+	$heading__color-light:			#333333;
+	$link__color-light:				#333333;
+	$link__hover__color-light:		rgba(#333333, .6);
+	$border__color-light:			#ebebe9;
+
+//Dark Theme Colors
+	$nutral__color-dark:			#333333;
+	$background__color-dark:		#3b3b3b;
+	$secondary__color-dark:			#b0b0b0;
+	$base__color-dark:				#e0e0e0;
+	$heading__color-dark:			#f5f5f5;
+	$link__color-dark:				#f5f5f5;
+	$link__hover__color-dark:		rgba(white, .8);
+	$border__color-dark:			#484848;
+
+//Color Mapping Definition
+
+  $colors: (
+  	light: (
+  		nutralColor:				$nutral__color-light,
+  		backgroundColor:			$background__color-light,
+  		secondaryColor: 			$secondary__color-light,
+  		baseColor: 					$base__color-light,
+  		headingColor:				$heading__color-light,
+  		linkColor:					$link__color-light,
+  		linkhoverColor:				$link__hover__color-light,
+  		borderColor:				$border__color-light
+  	),
+	dark: (
+		nutralColor:				$nutral__color-dark,
+  		backgroundColor:			$background__color-dark,
+  		secondaryColor: 			$secondary__color-dark,
+  		baseColor: 					$base__color-dark,
+  		headingColor:				$heading__color-dark,
+  		linkColor:					$link__color-dark,
+  		linkhoverColor:				$link__hover__color-dark,
+  		borderColor:				$border__color-dark
+  	),
+
+  	);
+
+

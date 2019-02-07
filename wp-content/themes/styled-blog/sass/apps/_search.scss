@@ -1,0 +1,44 @@
+//search
+.search-results{
+	.hentry,article{
+		margin-bottom:3rem;
+	}
+
+	.pagination-blog{
+		position:static;
+		@include transform(translate(0, 0));
+
+		a{
+			margin:0 .3rem;
+		}
+	}
+}
+.search-content{
+	.search-title{
+		@extend %heading;
+		@include font-size($heading3-font-sizes);
+
+		&:before{
+			content:none !important;
+		}
+	}
+	.entry-meta{
+		@extend %entry-meta;
+	}
+	.post-categories{
+		margin-bottom:1rem;
+		li{
+			display:inline-block;
+		}
+		a, a:visited{
+			@include styled_blog($colors) {
+	    		background-color: themed('linkColor');
+	    		color: themed('nutralColor');
+	  		};
+			padding:.2rem .5rem;
+			@include font-size($small-font-sizes);
+			margin:.2rem;
+
+		}
+	}
+}

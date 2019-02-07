@@ -1,0 +1,119 @@
+.styled_blog__left__sidebar{
+	.widget{
+		padding:0 2rem 0rem;
+	}
+}
+
+ .widget{
+ 	h2,
+ 	.widget-title{
+ 		@include font-size($heading3-font-sizes);
+ 		@extend %heading;
+ 	}
+ }
+
+
+//Recent Entries
+.widget_recent_entries, 
+.widget_archive,
+.widget_categories,
+.widget_product_categories{
+	ul{
+		@extend %list-items;
+		@extend %widgetPadding;
+		
+
+
+		li{ 
+			padding:1rem 0;
+			border-bottom:1px solid;
+			@include styled_blog($colors) {
+	    		border-color: themed('linkColor')
+	    	}
+	    	display:flex;
+	    	justify-content:space-between;
+	    	flex-wrap:wrap;
+	  		@include styled_blog($colors) {
+	    		color: themed('linkColor')
+	    	}
+	    	font-weight:600;
+
+	  		&:first-child{
+	  			padding-top:0;
+	  			
+	  		}
+	  	}
+
+	  	.children{
+	  		display: flex;
+		    width: 100%;
+		    justify-content: space-between;
+		    flex-direction: column;
+		    padding-bottom: 0;
+    		padding-left: 1rem;
+
+    		li{
+	    		&:last-child{
+		  			border-bottom:none;
+		  			
+		  		}
+    		}
+	  	}
+
+		a{
+			font-weight:600;
+			@extend %link-hover;
+		}
+	}
+}
+
+//Recent Comment
+.widget_recent_comments{
+	#recentcomments{
+		@extend %list-items
+	}
+
+	.recentcomments{
+		margin-top:1rem;
+	}
+	li.recentcomments{
+		> a{
+			font-weight:600;
+			@extend %link-hover;
+		}
+	}
+}
+
+.tagcloud{
+	margin-top:1rem;
+}
+
+ /*--------------------------------------------------------------
+# Widget About
+--------------------------------------------------------------*/
+@import "widgets/about";
+
+ /*--------------------------------------------------------------
+# Widget Search
+--------------------------------------------------------------*/
+@import "widgets/search";
+
+ /*--------------------------------------------------------------
+# Widget Social links
+--------------------------------------------------------------*/
+@import "widgets/social-links";
+
+ /*--------------------------------------------------------------
+# Recent Post
+--------------------------------------------------------------*/
+@import "widgets/recent-post";
+
+/*--------------------------------------------------------------
+# Recent Post
+--------------------------------------------------------------*/
+@import "widgets/footer";
+
+/*--------------------------------------------------------------
+# Filter
+--------------------------------------------------------------*/
+@import "widgets/filter";

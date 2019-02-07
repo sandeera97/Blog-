@@ -1,0 +1,18 @@
+//social links
+.styled_blog__left__sidebar{
+	.widget_text{
+		padding-bottom:0;
+
+		.textwidget {
+			
+		}
+
+		.social_link{
+			display:flex;
+			flex-wrap:wrap;
+			@extend %hollow-hover;
+			@extend %list-items;
+			margin-top:1rem;
+		}
+	}
+}

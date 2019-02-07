@@ -1,0 +1,118 @@
+.styled_blog__latest__ticker{
+	position:fixed;
+	width:100%;
+    z-index:9999;
+	@include styled_blog($colors) {
+    		background-color: themed('nutralColor');
+    min-height:86px;
+    	}
+
+	@include border('bottom', 1px, solid, null);
+	@include styled_blog($colors) {
+    		border-color: themed('borderColor');
+    	}
+
+	.styled_blog__latest__ticker--block{
+		display:flex;
+	}
+
+	&--label{
+		@include styled_blog($colors) {
+    		background-color: themed('backgroundColor');
+    	}
+    	font-family:$font__heading;
+    	@include font-size($base-font-sizes);
+    	font-weight:600;
+        position:relative;
+
+        &:after {
+            left: 100%;
+            top: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(118, 211, 245, 0);
+            @include styled_blog($colors) {
+                border-left-color: themed('backgroundColor');
+            }
+            border-width: 5px;
+            margin-top: -5px;
+        }	
+	}
+}
+
+.lSSlideOuter.vertical .lSAction > a{
+    background-image:none;
+	right: -10px;
+    left: inherit;
+
+    &.lSNext{
+    	bottom:4px;
+        right:-22px;
+    }
+
+    &.lSPrev{
+    	top:10px;
+  
+    }
+
+    &:hover{
+		text-decoration: none;
+		@include styled_blog($colors) {
+    		color: themed(linkhoverColor);
+  		}
+	}
+
+	&:visited{
+		@include styled_blog($colors) {
+    	color: themed('linkColor');
+  		}
+	}
+
+	&:active, &.active{
+		@include styled_blog($colors) {
+    	color: themed('linkColor');
+  		}
+	}
+}
+
+.lSAction > a{
+	opacity:1;
+}
+
+.lSSlideOuter.vertical .lightSlider > *{
+    @include mq($max-width: 640px) {
+  
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+a {
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    &:focus {
+        outline: none;
+    }
+}
+
+#primary-menu {
+    i {
+        font-size: 16px;
+        vertical-align: middle;
+    }
+}
+
+.styled_blog_move_to_top {
+    i {
+        padding-left: 25px;
+    }
+}

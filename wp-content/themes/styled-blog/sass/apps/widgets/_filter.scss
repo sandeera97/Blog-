@@ -1,0 +1,35 @@
+//search
+.styled_blog__left__sidebar{
+	.woocommerce{
+		.price_slider_wrapper{
+			margin:2rem 0;
+		}
+	
+		button{
+			font-family: $font__body;
+			background-color:transparent;
+			@extend %btn;
+		}
+
+		.price_label{
+			@extend %entry-meta;
+		}
+	}
+}
+
+.widget_price_filter .ui-slider .ui-slider-range{
+	@include styled_blog($colors) {
+	    background-color: themed('secondaryColor');
+	}
+}
+.widget_price_filter .ui-slider .ui-slider-handle{
+	@include styled_blog($colors) {
+	    background-color: themed('baseColor');
+	}
+}
+
+.widget_price_filter .price_slider_wrapper .ui-widget-content{
+	@include styled_blog($colors) {
+	    background-color: themed('linkhoverColor');
+	}
+}

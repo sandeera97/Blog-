@@ -1,0 +1,209 @@
+ 
+
+%list-items{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+%heading{
+  	&:before{
+  		content:'';
+  		width:6px;
+  		@include styled_blog($colors) {
+    		background: themed('headingColor');
+  		};
+  		height:100%;
+  		position:absolute;
+  		top:50%;
+  		left:0;
+  		bottom:0;
+  		@include transform(translate(-36px, -50%))
+  	}
+ }
+//input styles
+ %input-style{
+ 	background-color:transparent;
+ 	border:none;
+ 	@include border('bottom', 2px, solid, null);
+ 	@include styled_blog($colors) {
+    		border-color: themed('linkColor');
+    		color:themed('linkColor');
+  		};
+  	@include border-radius(0);
+  	@include font-size($small-font-sizes);
+	
+ }
+
+%button-effect-remove{
+	background-color:transparent;
+	border:1px solid;
+	border-color:transparent;
+}
+
+//search-style
+
+%search-style{
+ 	@include styled_blog($colors) {
+    	background-color: themed('headingColor');
+  	};
+  	position:relative;
+  	padding-top: 2rem;
+  	padding-bottom: 2rem;
+
+  	form{
+	  	input{
+	  		width:100%;
+	  		padding-left: 1.5rem;
+
+	  		&.search-submit{
+	  			display:none;
+	  		}
+	  	}
+
+	  	label{
+	  		width:100%;
+	  	}
+  	}
+
+  	&:after{
+	  	content: "\f002";
+		left: 2rem;
+		top: 47%;
+		@include styled_blog($colors) {
+	    	color: themed('nutralColor');
+	    }
+		font-family: Font Awesome\ 5 Free;
+		font-style: normal;
+		font-weight: bold;
+		text-decoration: inherit;
+		position: absolute;
+		@include font-size($small-font-sizes);
+		@include transform(translateY(-50%)); 
+	}
+}
+
+//Social icons hover
+%hollow-hover{
+		a{
+		@include styled_blog($colors) {
+	    	background: themed('linkColor');
+	    	color: themed('nutralColor');
+	  	};
+	  	width:35px;
+	  	height:35px;
+	  	display:inline-block;
+	  	text-align:center;
+	  	line-height:35px;
+	  	margin:.5rem;
+	  	@include transform( perspective(1px) translateZ(0));
+	  	@include transition(background .3s );
+	  	border:2px solid;
+ 		@include styled_blog($colors) {
+    		border-color: themed('linkColor');
+  		};
+		
+		&:hover{
+			background-color:transparent;
+			@include styled_blog($colors) {
+    			color: themed('linkColor');
+  			};
+		}
+	}
+}
+
+//widgets padding
+%widgetPadding{
+	padding: 1.5rem 0;
+}
+
+//linkhover style
+%link-hover{
+	position:relative;
+	font-weight:bold;
+	&:after{
+		position:absolute;
+		content:'';
+		bottom:0;
+		left:0;
+		width:100%;
+		height:1px;
+		visibility:hidden;
+		opacity:0;
+		@include styled_blog($colors) {
+    			background-color: themed('linkColor');
+  			};
+  		@include transform( translateY(10px));
+	  	@include transition(all .3s ease );
+
+	}
+	&:hover{
+		@include styled_blog($colors) {
+    			color: themed('linkColor');
+  			};
+		&:after{
+			@include transform( translateY(0px));
+			height:2px;
+			visibility:visible;
+			opacity:1;
+		}
+	}
+}
+//transparent Overlays
+%transparent-overlay{
+	position:relative;
+
+	&:after{
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:100%;
+	background-color:transparentize($nutral__color-dark, .7);
+	}
+}
+//entry Meta
+%entry-meta{
+	@include font-size($small-font-sizes);
+	margin: .5rem 0;
+		@include styled_blog($colors) {
+			color: themed('secondaryColor');
+		};
+
+	a, .author{
+		@include styled_blog($colors) {
+			color: themed('linkColor');
+		};
+		  		
+	}
+}
+
+//Buttons
+
+%btn{
+	border:2px solid;
+	@include styled_blog($colors) {
+		border-color: themed('linkColor');
+		color: themed('linkColor');
+	};
+
+	@include border-radius(0);
+	text-transform:uppercase;
+	@include font-size($small-font-sizes);
+	font-weight:500;
+	padding:.4rem 1rem;
+
+  	@include transition(all 300ms ease-in-out);
+  	cursor:pointer;
+
+	&:hover{
+		@include styled_blog($colors) {
+			background-color: themed('linkColor');
+			color:themed('nutralColor')
+		};
+
+	}
+}
+

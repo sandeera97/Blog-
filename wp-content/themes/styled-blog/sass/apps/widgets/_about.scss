@@ -1,0 +1,19 @@
+//about
+.styled_blog_about_us_widget{
+	.styled_blog__widget{
+		&--content{
+			position:relative;
+			@extend %widgetPadding;
+		}
+
+		&--figure{
+			position:absolute;
+			left:0;
+			margin:0rem;
+			}
+
+		&--excerpt--content{
+			margin-left:5.5rem;
+		}
+	}
+}

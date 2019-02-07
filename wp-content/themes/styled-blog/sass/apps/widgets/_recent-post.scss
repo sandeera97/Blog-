@@ -1,0 +1,32 @@
+//Recent blog
+.styled_blog_widget_recent_posts{
+	.recent-posts-wrapper{
+		@extend %widgetPadding;
+	}
+
+	.recent-posts-item{
+		position:relative;
+		padding-left: 5.5rem;
+		padding-bottom:1rem;
+
+		&:last-child{
+			padding-bottom:0;
+		}
+
+		.recent-posts-thumb{
+			position:absolute;
+			left:0;
+		}
+
+		.recent-posts-title{
+			@include font-size($base-font-sizes);
+			line-height:$base-line-height * 0.8
+		}
+
+		.recent-posts-meta{
+			@extend %entry-meta;
+		}
+
+	}
+}
+

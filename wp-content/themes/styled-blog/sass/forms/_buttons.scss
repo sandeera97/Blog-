@@ -1,0 +1,9 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	font-family: $font__body;
+	background-color:transparent;
+	@extend %btn;
+
+}
